@@ -1,0 +1,94 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("day.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: red;
+
+}
+.dino {
+    height: 170px;
+    width: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease-in-out; /* Move transition here */
+    cursor: pointer;
+    margin: 0 auto;
+margin-top: 400px;
+   
+}
+
+.dino img {
+    height: 160px;
+    width: 160px;
+   
+}
+
+.up {
+    transform: translateY(-250px); /* Upward motion (negative Y) */
+}
+
+h1{
+   text-align: center;
+   margin-top: 100px;
+    text-decoration: underline;
+}
+.enemy {
+    position: absolute;
+    display: flex;
+    gap: 400px;
+    justify-content: space-evenly;
+    bottom: 0;
+    right: -6000px; /* enemy screen ke bahar start karega */
+    width: 6000px;
+}
+
+.enemy img{
+    height: 90px;
+    width: 60px;
+}
+
+@keyframes moveEnemy {
+    from {
+        transform: translateX(-100px); /* screen ke bahar se left side */
+    }
+    to {
+        transform: translateX(-5500px); /* screen ke right edge tak */
+    }
+}
+
+
+.move {
+    animation: moveEnemy 15s linear infinite;
+    
+}
+
+.score{
+    height: 35px;
+    width: 150px;
+    
+    font-weight: bold;
+    font-size: 1.75rem;
+    padding: 0.25rem;
+    padding-left: 1.5rem;
+    position: absolute;
+    right: 300px;
+    border-radius: 30%;
+    top: 200px;
+    text-decoration: underline;
+}
+
+
+
+
+
